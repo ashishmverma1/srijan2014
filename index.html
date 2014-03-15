@@ -1,0 +1,672 @@
+<html>
+<head>
+<title>Srijan 2014</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Srijan is the annual socio-cultural fest of Indian School of Mines, Dhanbad.">
+<meta name="keywords" content="srijan, srijan 13, fest, ism fest, cult fest">
+<link rel="shortcut icon" href="img/favico.png" />
+<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'/>
+<link rel="icon" type="img/png" href="images/favico.png" />
+<link rel="stylesheet" type="text/css" href="css/tv.css" />
+<link rel="stylesheet" type="text/css" href="css/srijan.css" />	
+<script src="js/jquery-1.7.2.min.js"></script> 
+ <script src="js/srijan.js"></script>
+ <script type="text/javascript" src="js/news.js"></script>
+ 
+ <link rel="stylesheet" type="text/css" href="css/bgVideo.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+
+	<link rel="stylesheet" href="css/styleofbutton.css"/>
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
+        
+    <!-- This is the function!!! -->
+    
+	<script type="text/javascript">
+	  window.my_mute = false;
+		$(document).ready(function(){
+			$('#button1').on('click', function(){
+				$(this).toggleClass('on');
+				document.getElementById('bgAudio').muted = !(document.getElementById('bgAudio').muted);
+			});
+		});
+
+		
+	</script>
+	<script type="text/javascript">
+    var filmVisible = false;
+	  window.my_mute = false;
+		$(document).ready(function(){
+			$('#button2').on('click', function(){
+				$(this).toggleClass('on');
+				if(!filmVisible){filmstripappear(); filmVisible = true;}
+                else { filmstripdisappear(); filmVisible=false;}
+			});
+		});
+
+		
+	</script>
+    
+	<script type="text/javascript">
+	  window.my_mute = false;
+		$(document).ready(function(){
+			$('#button3').on('click', function(){
+				$(this).toggleClass('on');
+			 goFullscreen();
+            });
+		});
+
+		
+	</script>
+
+    <!-- Function ends -->
+    
+    <!-- Google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48828069-1', 'srijanism.org');
+  ga('send', 'pageview');
+
+</script>
+    
+    
+ </head>
+ <body>
+ 
+<!-- Image for thumbnail while sharing on facebook, not visible on website -->
+<img src="img/srijan14_logo.png" height="0" width="0"/>
+
+
+<div id="srijan-logo-big"></div>
+<canvas id="tv"></canvas>
+<h1 id="loading">LOADING...</h1>
+<div id="volume-rocker">
+</div>
+
+
+<div id="left-filmstrip"></div>
+<div id="right-filmstrip"></div>
+
+
+<!-- CHANGES --><div class="body-wrapper">
+
+<div id="top-filmstrip" tabindex="-1"> 
+    <div class="film-pic" id="pic1"></div>
+    <div class="film-pic"  id="pic2"></div>
+    <div class="film-pic"  id="pic3"></div>
+    <div class="film-pic"  id="pic4"></div>
+    <div id="gal" >Galleria</div>
+    <div class="film-pic"  id="pic5"></div>
+    <div class="film-pic"  id="pic6"></div>
+    <div class="film-pic"  id="pic7"></div>
+    <div class="film-pic"  id="pic8"></div>
+    <img src="img/topfilm.png" width="100%"/>
+</div>
+<div id="bottom-filmstrip" tabindex="-1">
+    <div class="film-pic"  id="pic9"></div>
+    <div class="film-pic"  id="pic10"></div>
+    <div class="film-pic"  id="pic11"></div>
+    <div class="film-pic"  id="pic12"></div>
+    <div class="film-pic" id="pic13"></div>
+    <div class="film-pic"  id="pic14"></div>
+    <div class="film-pic"  id="pic15"></div>
+    <div class="film-pic"  id="pic16"></div>
+    <div class="film-pic"  id="pic17"></div>
+    <div class="film-pic"  id="pic18"></div>
+    <div class="film-pic" id="pic19"></div>
+    <div class="film-pic" id="pic20"></div>
+    <img src="img/bottomfilm.png" width="100%"/>
+</div>
+<div id="film-big-image"></div>
+<div id="background-strip"> </div>
+<div id="remotearrow" onMouseOver="remoteappear()" onMouseOut="remotedisappear()">
+</div>
+<div id="remote"  onmouseover="remoteappear()" onMouseOut="remotedisappear()">
+<div id="mute" ><section > 
+		<a tabindex="-1" href="#" id="button1" style="position:relative; left:-30;">&#xe600;</a>
+		<span></span>
+	</section></div>
+
+        <div id="film">
+            <section > 
+		    <a  tabindex="-1" href="#" id="button2" style="position:relative; left:-30;">&#xe608;</a>
+		    <span></span>
+	       </section>
+       </div>
+    
+        <div id="fullscreen" tabindex="-1">
+            <section> 
+            <a  tabindex="-1" href="#" id="button3" style="position:relative; left:-30;">&#xe60d;</a>
+            <span></span>
+	        </section>
+        </div>
+</div>
+<video id="bgVideo" autoplay loop>
+	<source src="multimedia/bgVideo.mp4" type="video/mp4">
+    <source src="multimedia/bgVideo.webm" type="video/webm">
+    <img src="multimedia/bgImg.jpg" style="width:100%; top:0; padding: 0; margin: 0;">
+</video>
+<div id="bgPattern"></div>
+
+<audio loop id="bgAudio">
+  <source src="multimedia/bgAudio.mp3" type="audio/mpeg">
+  <source src="multimedia/bgAudio.wav" type="audio/wav">
+</audio>
+<!-- Background video & audio ends-->
+<!-- Bottom updates -->
+<div id="bottomUpdatesContainer">
+  <div id="weather"></div>
+  
+  <div id="header">
+<img src="img/ism_logo.png" height="80%" width="35%" style="padding-left: 02%;"/>
+<a style="z-index:40; position:relative;" href="https://www.facebook.com/ism.srijan" target="_blank"><img src="img/srijan14_logo.png" height="80%" width="50%"/></a>
+
+  </div>
+  
+  <!-- Update the 'noOfNews' property in news.js -->
+  <div id="news_content">
+    <div id="news1cont" class="cont">Srijan '14 &nbsp;&nbsp;//&nbsp;&nbsp; Suit Up &nbsp;&nbsp;//&nbsp;&nbsp; 28-30 March</div>
+    <div id="news2cont" class="cont">Registration Fee Rs. 1000/- including t-shirt &amp; accomodation.</div>
+    <div id="news3cont" class="cont">Prize money worth Rs. 5 Lakhs!</div>
+    <div id="news4cont" class="cont">Snappers, photography contest, starts from 8th March.</div>
+    <div id="news5cont" class="cont">Mr. &amp; Miss Face of Srijan starts from 1st March.</div>
+  </div>
+</div>
+<!-- Bottom updates ends -->
+
+
+<div class="container">
+<!--<div class="topbar">
+	<div style="float: right; position: relative; top: 4px;"></div> 
+</div>-->
+<div  class="navbar">
+<a href="#" class="icons" onClick="aboutusappear()"><img src="img/aboutus.png" style="height:75px; width:75px;"/><div>About Us</div></a>
+<a href="#" class="icons"onclick="eventsappear()" ><img src="img/events.png" style="height:75px; width:75px;"/><div>Events</div></a>
+<a href="#" class="icons"onclick="contactusappear()"><img src="img/contactus.png" style="height:60px; width:80px; margin-top:10%;"/><div>Contact Us</div></a>
+<a href="#" class="icons"onclick="sponsorsappear()" ><img src="img/sponsors.png" style="height:70px; width:90px; margin-top: 10%;"/><div>Sponsors</div></a>
+<a href="#" class="icons"onclick="hospitalityappear()" ><img src="img/hospitality.png" style="height:80px; width:84px;"/><div>Hospitality</div></a>
+<a href="#" class="icons"onclick="registerappear()" ><img src="img/register.png" style="height:80px; width:95px;"/><div>Register Now!</div></a>
+
+</div>
+<div class="content">
+<div id="left">
+
+    <div id="eventslist" > <!--Main Event Categories in left column -->
+    <a  href="#" class="eventicons" onClick="danceeventsappear()"><img  src="img/dance.png" style="height:80px; width:75px;"/><div class="eventtitles">Step Up!
+    <font class="eventcaptions" >
+    <br/>Step Up! Dance Floors & Ramps! 
+    </font>
+    </div></a>
+        <br/><hr size="1px" width="80%" align="left"/> 
+    <a class="eventicons" href="#" onClick="photographyeventsappear()"><img src="img/fashion.png" style="height:80px; width:80px;"/><div class="eventtitles">Suit up!<font class="eventcaptions"  >
+    <br/>Come! Walk the ramp!</font></div></a>
+    <br/><hr size="1px" width="80%" align="left"/>
+    <a class="eventicons" href="#" onClick="dramaeventsappear()"><img src="img/drama.png" style="height:80px; width:80px;"/><div class="eventtitles">Live the tale!<font class="eventcaptions" ><br/>
+    &nbsp;&nbsp;Literally & Dramatically...!</font></div></a>
+    <br/><hr size="1px" width="80%" align="left"/>
+    <a class="eventicons" href="#" onClick="musiceventsappear()"><img src="img/music.png" style="height:80px; width:80px;"/><div class="eventtitles">Strike a Chord!
+    <font class="eventcaptions" >
+    <br/>
+    &nbsp;Sing it ! Play it ! Compose it !</font></div></a>
+    <br/><hr size="1px" width="80%" align="left"/>
+    <a class="eventicons" href="#" onClick="snapeventsappear()"><img src="img/photography.png" style="height:80px; width:80px;"/><div class="eventtitles">Set the Focus! 
+    <font class="eventcaptions" >
+    <br/>
+    &nbsp;Zoom it ! Snap it ! Caption it !</font></div></a>
+    <br/><hr size="1px" width="80%" align="left"/>
+    
+    </div></div>
+<div id="right" >
+<!-- Contact Us Box will appear in the right column-->
+<div id="contactus">
+    <h1 class="contactheadings" style="font-size: 80px">Contact Us</h1>
+    <h2 class="contactheadings">Secretary</h2>
+    <div class="contact">Kushagra Bhardwaj<br />General Secretary<br/>+91-9122799709<br />kushagra.bhardwaj@srijanism.org<br><a href="https://www.facebook.com/erkushagra" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Aditya Anchliya<br />Joint Secretary<br/>+91-9939879562<br />aditya.anchliya@srijanism.org<br><a href="https://www.facebook.com/aditya.anchliya" target='_blank'><div class="fbProfile"></div></a></div>
+    <br/><br/>
+    <h2 class="contactheadings">Coordinators</h2>
+    <div class="contact">Himanshu Bhardwaj<br />+91-7209832492<br />himanshu.bhardwaj@srijanism.org<br><a href="https://www.facebook.com/himanshubhardwaj.ism" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Prashant Sharma<br />+91-8092633969<br />prashant.sharma@srijanism.org<br><a href="https://www.facebook.com/profile.php?id=100001685006462" target='_blank'><div class="fbProfile"></div></a></div>
+    <br/><br/>
+    <h2 class="contactheadings">CO-COORDINATORS</h2>
+&emsp;&emsp;&emsp;&emsp;&emsp;
+    <div class="contact">Jatin Mongia<br />Sponsorship Head<br />+91-9709039074<br />jatin.mongia@srijanism.org<br><a href="https://www.facebook.com/Deducted29" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Shivam Agrawal<br />Event Head<br />+91-8757087600<br />shivam.agrawal@srijanism.org<br><a href="https://www.facebook.com/shivam.agrawal.756859" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Alpesh Bupkya<br />Creative Head<br />+91-8051012494<br />alpesh.bupkya@srijanism.org<br><a href="https://www.facebook.com/alpesh.bupkya" target='_blank'><div class="fbProfile"></div></a></div>
+
+<br>
+<br>
+    <div class="contact">Jayant Kumar<br />Promotion Head<br />+91-7277532745<br />jayant.kumar@srijanism.org<br><a href="https://www.facebook.com/jayant.kumar.545" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Siddharth Behera<br />Technical Head<br />+91-8987765807<br />siddharth.behera@srijanism.org<br><a href="https://www.facebook.com/SidBehera" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Rohit Singh<br />Hospitality Head<br />+91-9572146837<br />rohit.singh@srijanism.org<br><a href="https://www.facebook.com/rsiitian" target='_blank'><div class="fbProfile"></div></a></div>
+
+    <h2 class="contactheadings">SOCIAL MANAGEMENT TEAM</h2>
+    <div class="contact">Shammi Kumar<br />+91-8102833257<br />shammi.iit2011@gmail.com<br><a href="https://www.facebook.com/shammi.kumar.142" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Imroj Syed<br />+91-8051012469<br />imroj.syed@gmail.com<br><a href="https://www.facebook.com/imroj.syed" target='_blank'><div class="fbProfile"></div></a></div>
+    
+
+    
+    <h2 class="contactheadings">Web - Team</h2>
+    <div class="contact">Ashish Verma<br />+91-8674806449<br />ashish_verma_1@yahoo.com<br><a href="https://www.facebook.com/ashishmverma1" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Mohit Chawla<br />+91-9939876256<br />mohshia8@gmail.com<br><a href="https://www.facebook.com/mohit.chawla.716" target='_blank'><div class="fbProfile"></div></a></div>
+
+</div>
+<div id="register" class="register">
+<h1 id="regHead" style="font-size:40px;">Registration</h1>
+<br><br>
+Please read the <a href="#regFAQ" style="color:rgb(51,204,255);">FAQs</a> before registering, in case you have any doubts.<br><br>
+If you decide to make an <b><i>online payment</i></b>, here are the account details:<br>
+(Pay the fee of INR.850, then fill out the registration form choosing 'online mode' inside the form.)<br><br>
+
+Account Number: 10230795114<br>
+MICR: 826002006<br><br>
+
+<h1 style="font-size:30px;">To register, <a href="https://docs.google.com/forms/d/1gXocLF6Suf_MAAmRHu853AQ1dpVxpvYF6U3Nx5L4obE/viewform" target="_blank">click here!</a></h1>
+<br/><br/><br/>
+
+<div style="text-align:left;">
+<h1 id="regFAQ" style="font-size: 50px; text-align:center;">FAQs</h1>
+<p><b>Q1. What is the registration fee?</b><br>
+The registration fee is Rs.1000 for on-spot registration and Rs.850 for online payment before 25th March. Also, for registration, fill in the form available in the registration section beforehand.  Also, Rs.100 extra will be taken as caution money from the participant on the registration desk and will be refunded when the participant chooses to leave, after the due checking of the services i.e. bedding accommodation provided to them by ISM Dhanbad.</p>
+<p><b>Q2. How do I pay the registration fee?<br></b>
+The registration fee would be collected once you reach the registration desk of SRIJAN’14. And if you choose to pay by online mode, you’ll be required to transfer the fees to SRIJAN account, details of which are mentioned below. Don’t forget to write Srijan Registration in the remarks section while paying the fees. Afterwards, fill in the registration form on the website and mention your transaction ID.</p>
+<p><b>Q3. In which account do I deposit the online registration fees?</b><br>
+Account No.: 10230795114<br/>  
+Bank Name: SBI (ISM Branch, Dhanbad)<br/>
+IFS Code: SBIN0001641<br>
+MICR #: 826002006</p>
+<p><b>Q4. What all deliverables do we receive after registering?<br></b>
+Registration fee includes exclusive SRIJAN’14 T-shirts, accommodation, goodies and an id-card which ensures the participant gets free entry into all-star nights . Winners get internship opportunities (selected events) apart from the cash awards given and are also certified for their participation as well as for winning the events.</p>
+<p><b>Q5. What kind of accommodation is available?<br></b>
+There is separate accommodation for girls and boys. Proper bedding and blankets would be made available to all the registered students.</p>
+<p><b>Q6. Is food included in the registration fee?<br></b>
+No, food is not included in the registration amount. However, there are food stalls available in the arena open till night. Apart from this, there are various canteens in the campus where food is available at affordable rates.</p>
+<p><b>Q7. Can I register, but not take accommodation?<br></b>
+The registration amount remains unchanged in both the cases. It is advisable to avail the accommodation facility since there is no other mode of accommodation available in the campus during the fest.</p>
+<p><b>Q8. How do I avail travelling facility from Dhanbad Station to ISM?<br></b>
+To avail service from Dhanbad station to ISM, volunteers will be available at Dhanbad station.</p>
+<p><b>Q9. I want to attend star nights only, will I have to pay the whole registration fee?<br></b>
+In such a case, you would have to pay a sum of Rs 300 for the pro night of 30th March at the registration desk to get special pass for star night or you can also opt to pay online Rs 250 beforehand. Don’t forget to write Srijan Star Night in the remarks section while paying the fees. Afterwards, fill in the registration form on the website and mention your transaction ID. But in this case, you cannot avail accommodation, nor can you participate in any other event.</p>
+<p><b>Q10. How do we register for a group event?</b><br>
+For group registration, all team members are required to register themselves individually to get their SRIJAN IDs first. Then one member of the team will send a mail with the subject as "event name" for that particular event to the ‘email-id’ specified in the rules of that particular event. The mail should comprise the following details:
+<ul>
+<li>College Name</li>
+<li>Names of all the team members</li>
+<li>SRIJAN ID’s of all team members</li>
+<li>Phone numbers (of atleast two members)</li> 
+<li>E-mail ID's (of atleast two members)</li>
+<li>Location (City)</li></ul>
+Please note that pre-registration for all events is mandatory. The organizers reserve the right to disqualify any participating team which has not pre-registered.</p>
+<p><b>Q11. Can two participants be from different colleges in a team event?</b><br>
+Yes. SRIJAN does not restrict cross participation from colleges in a team event.</p>
+<p><b>Q12. I am coming to Srijan with lots of friends from my college. Do I get a bulk discount?</b><br/>
+Yes. If your group comprises of more than 30 students, you can apply for concession and Rs 150 per head would be refunded in case of on-site payment of registration fees and Rs 100 per head would be refunded in case of online payment of registration fees. However, be advised that this is applicable on students from the same college only.</p>
+<p><b>Q13. What are Srijan IDs?</b><br>
+Srijan ID’s are unique identification codes issued to participants as they register themselves. Participants are required to report with their ISrijan ID’s at the control tent and that will be required for further participation in any event.</p>
+<p><b>Q14. How to pay the online fees?</b><br>
+An account transfer should be made to the account number mentioned on the Registration page. Your transaction ID will be verified on the registration desk. Any failure to bring the transaction slip, would void the registration.</p>
+</div><br>
+
+<a href="#regHead" style="font-size:22px;">Back to registration</a>
+</div>
+
+<div id="sponsors">
+<h1 style="color: white; font-size: 40px;">Why Sponsor Srijan 2014?</h1>
+<ul style="color:white; font-size:18px; line-height:24px;">
+<li>Extensive reach of posters to over 300 colleges and corporates across the nation.</li>
+<li>Publicity through articles and advertisements in national dailies, business mgazines, news achnnels, social networking websites etc.</li>
+<li>Publicity through flexes, banners, infrormation booklets, flyers and other paraphernalia.</li>
+<li>Apearance of name and logo of the sponsor in the website of Srijan 2014.</li>
+<li>On campus branding and publicity during the festival amongst 15,000 od participants, including students, professors and industry experts alike.</li>
+<li>Ideal platform for launching new products and technology demonstration.</li>
+<li>Discussion/lecture sessions by the sponsors during festival which helps the company in realizing the mind-set of the students and hence understand each other.</li>
+</ul>
+
+<font style="font-size:24px;color:rgb(255,255,255);">Download the sponsorship brochure <a href="docs/srijanBrochure.pdf" target="_blank" style="color:rgb(51,204,255);">here.</a></font>
+
+<h1 style="color: white; font-size: 40px;">Sponsorship Team</h1>
+	<div class="contact">Jatin Mongia<br/>Head (Sponsorship Team)<br/>+91-9709039074<br/>jatinmongia29@gmail.com</div><br/>
+    <div class="contact">Subham Walia<br />+91-8298169129<br />kanu_2587@yahoo.com</div>
+    <div class="contact">Hanpreet Singh<br />+91-8051005827<br />hanpreetdua@yahoo.com</div>
+    <div class="contact">Shubham Ashok Gandhi<br />+91-8987419771<br />shubhamashokgandhi@gmail.com</div><br>
+    <div class="contact">Anant Vikram Singh<br />+91-7561995610<br />anantvs93@gmail.com</div>
+    <div class="contact">Divyesh Kothari<br />+91-8987642809<br />divyesh@ismu.ac.in</div>
+    <div class="contact">Shashank Dubey<br />+91-8092055384<br />Shanshankdubey.1245@gmail.com</div><br>
+    <br/><br/>
+
+<h1 style="color: white; font-size: 40px;">Our Partners</h1>
+
+<img src="logos/cocoon.png" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/NPCIL.jpg" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/Sujana.jpg" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/tata-steel-logo.png" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/NestleLogo.jpg" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/knowafest.png" style="height: 20%; width:20%; opacity:1;"/>
+<img src="logos/enquotism.png" style="height: 20%; width:20%; opacity:1;"/>
+
+<h1 style="color: white; font-size: 40px;"> Our Past Sponsors</h1>
+
+    <img src="logos/castrol.gif" style="height: 20%; width:20%; opacity:1;"/>
+    <img src="logos/spykar.jpg" style="height: 20%; width:20%;"/>
+    <img src="logos/sandvik.png" style="height: 20%; width:20%;"/><br/><br/>
+    <img src="logos/schlum.jpg" style="height: 20%; width:20%;"/>
+    <img src="logos/pnb.gif" style="height: 20%; width:20%;"/>
+    <img src="logos/oilindia.png" style="height: 20%; width:20%; background-color: white;"/>
+    <br/><br/><br/>
+    <img src="logos/cairn.jpg" style="height: 20%; width:20%;"/>
+    <img src="logos/jaypee.jpg" style="height: 20%; width:20%;"/>
+    <img src="logos/logontpc.gif" style="height: 20%; width:20%;"/><br/><br/>
+    <img src="logos/IOC.jpg" style="height: 35%; width:15%;"/>
+    
+    <img src="logos/shell.jpg" style="height: 35%; width:15%;"/>
+    
+    <img src="logos/tata.png" style="height: 35%; width:15%; background-color: white;"/>
+    <br/><br/>
+    <img src="logos/sail.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/ci.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/ongc.jpg" style="height: 33%; width:15%;"/><br/><br/>
+    <img src="logos/jindal.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/gail.png" style="height: 30%; width:15%;"/>
+    <img src="logos/rel.png" style="height: 30%; width:15%;"/><br/><br/><br/>
+    
+    
+    <img src="logos/spe.jpg" style="height: 30%; width:15%;"/>
+    
+    <img src="logos/ismaa.jpg" style="height: 26%; width:15%;"/>
+    <img src="logos/amba.jpg" style="height: 30%; width:15%;"/><br/><br/>
+    <img src="logos/sbi.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/ucil.jpg" style="height: 30%; width:15%;"/>
+    
+    <img src="logos/pfc.jpg" style="height: 30%; width:15%;"/><br/><br/><br/>
+    <img src="logos/iob.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/usv.jpg" style="height: 30%; width:15%;"/>
+    
+    
+    <img src="logos/winsome.jpg" style="height: 30%; width:15%;"/><br/><br/>
+    <img src="logos/pf.jpg" style="height: 30%; width:15%;"/>
+    <img src="logos/vanh.jpg" style="height: 30%; width:15%;"/>
+    
+    <img src="logos/nypfc.jpg" style="height: 30%; width:15%;"/><br/><br/>
+    <img src="logos/17.png" style="height: 40%; width:15%;"/>
+    <img src="logos/dominos.png" style="height: 40%; width:15%;"/><br/>
+    
+    </div>
+<div id="hospitality">
+<h1 style="font-size: 50px; text-align:center;">Hospitality</h1>
+<p>Indian School of Mines, Dhanbad has been long known for its vibrant culture, tradition and hospitality. The hospitality team of the event intends to carry this legacy of ISM forward by maintaining a healthy host-guest relationship. It will be the utmost pleasure of the hospitality team to make all its guest feel at home through highly warm and affectionate service.</p>
+<p>Participants from all across India are thus cordially invited to be a part of this mega cultural event. It is our humble request to the interested candidates to register themselves or atleast inform our team beforehand about the exact date and time of their arrival in order to avoid any last minute rush and inconvenience.</p>
+
+<h1 style="font-size: 30px; text-align:center;">Hospitality Team:</h1>
+	<div class="contact" style="margin-left:40%; text-align:center;">Rohit Singh<br/>Head (Hospitality Team)<br/>+91-9572146837<br/>rs1493@gmail.com</div><br/>
+    <div class="contact" style="margin-left:25%; text-align:center;">Chitransh Jain<br />+91-9709011659<br />chitransh.ismu7137@gmail.com</div>
+    <div class="contact" style="margin-left:50px; text-align:center;">Jinesh Doshi<br />+91-8987417868<br/>jinesh.doshi@ismu.ac.in</div><br/>
+
+<h1 style="font-size: 50px; text-align:center;">FAQs</h1>
+<p><b>Q1. What is the registration fee?</b><br>
+The registration fee is Rs.1000 for on-spot registration and Rs.850 for online payment before 25th March. Also, for registration, fill in the form available in the registration section beforehand.  Also, Rs.100 extra will be taken as caution money from the participant on the registration desk and will be refunded when the participant chooses to leave, after the due checking of the services i.e. bedding accommodation provided to them by ISM Dhanbad.</p>
+<p><b>Q2. How do I pay the registration fee?<br></b>
+The registration fee would be collected once you reach the registration desk of SRIJAN’14. And if you choose to pay by online mode, you’ll be required to transfer the fees to SRIJAN account, details of which are mentioned below. Don’t forget to write Srijan Registration in the remarks section while paying the fees. Afterwards, fill in the registration form on the website and mention your transaction ID.</p>
+<p><b>Q3. In which account do I deposit the online registration fees?</b><br>
+Account No.: 10230795114<br/>  
+Bank Name: SBI (ISM Branch, Dhanbad)<br/>
+IFS Code: SBIN0001641<br>
+MICR #: 826002006</p>
+<p><b>Q4. What all deliverables do we receive after registering?<br></b>
+Registration fee includes exclusive SRIJAN’14 T-shirts, accommodation, goodies and an id-card which ensures the participant gets free entry into all-star nights . Winners get internship opportunities (selected events) apart from the cash awards given and are also certified for their participation as well as for winning the events.</p>
+<p><b>Q5. What kind of accommodation is available?<br></b>
+There is separate accommodation for girls and boys. Proper bedding and blankets would be made available to all the registered students.</p>
+<p><b>Q6. Is food included in the registration fee?<br></b>
+No, food is not included in the registration amount. However, there are food stalls available in the arena open till night. Apart from this, there are various canteens in the campus where food is available at affordable rates.</p>
+<p><b>Q7. Can I register, but not take accommodation?<br></b>
+The registration amount remains unchanged in both the cases. It is advisable to avail the accommodation facility since there is no other mode of accommodation available in the campus during the fest.</p>
+<p><b>Q8. How do I avail travelling facility from Dhanbad Station to ISM?<br></b>
+To avail service from Dhanbad station to ISM, volunteers will be available at Dhanbad station.</p>
+<p><b>Q9. I want to attend star nights only, will I have to pay the whole registration fee?<br></b>
+In such a case, you would have to pay a sum of Rs 300 for the pro night of 30th March at the registration desk to get special pass for star night or you can also opt to pay online Rs 250 beforehand. Don’t forget to write Srijan Star Night in the remarks section while paying the fees. Afterwards, fill in the registration form on the website and mention your transaction ID. But in this case, you cannot avail accommodation, nor can you participate in any other event.</p>
+<p><b>Q10. How do we register for a group event?</b><br>
+For group registration, all team members are required to register themselves individually to get their SRIJAN IDs first. Then one member of the team will send a mail with the subject as "event name" for that particular event to the ‘email-id’ specified in the rules of that particular event. The mail should comprise the following details:
+<ul>
+<li>College Name</li>
+<li>Names of all the team members</li>
+<li>SRIJAN ID’s of all team members</li>
+<li>Phone numbers (of atleast two members)</li> 
+<li>E-mail ID's (of atleast two members)</li>
+<li>Location (City)</li></ul>
+Please note that pre-registration for all events is mandatory. The organizers reserve the right to disqualify any participating team which has not pre-registered.</p>
+<p><b>Q11. Can two participants be from different colleges in a team event?</b><br>
+Yes. SRIJAN does not restrict cross participation from colleges in a team event.</p>
+<p><b>Q12. I am coming to Srijan with lots of friends from my college. Do I get a bulk discount?</b><br/>
+Yes. If your group comprises of more than 30 students, you can apply for concession and Rs 150 per head would be refunded in case of on-site payment of registration fees and Rs 100 per head would be refunded in case of online payment of registration fees. However, be advised that this is applicable on students from the same college only.</p>
+<p><b>Q13. What are Srijan IDs?</b><br>
+Srijan ID’s are unique identification codes issued to participants as they register themselves. Participants are required to report with their ISrijan ID’s at the control tent and that will be required for further participation in any event.</p>
+<p><b>Q14. How to pay the online fees?</b><br>
+An account transfer should be made to the account number mentioned on the Registration page. Your transaction ID will be verified on the registration desk. Any failure to bring the transaction slip, would void the registration.</p>
+
+</div>
+
+
+<div id="aboutus">
+    <font color="white" style="opacity:1;"><h1>About Srijan</h1>Srijan. Call it the 'passion for creation' or a 'celebration of creativity'; its all about setting our wildest dreams and passions into motion. Srijan is celebrated annually at ISM Dhanbad. The festival is not only a panorama of events to test the cultural and artistic skills of the youth from all over the country, but it also endeavours to bring together eminent artists as well as celebrities across the globe, all in an attempt to bestow a memorable and spellbinding experience.
+    <h1>About Indian School of Mines</h1>
+    <p>The Indian School of Mines was formally opened on 9th December 1926, by Lord Irwin, the then Viceroy of India with disciplines of Mining and Applied Geology. In 1967 it was granted the status of a deemed to be university. Situated in the heart of the country's prime coking coal belt, the campus spreads over an area of 393 acres. The fully residential campus with all the facilities of a world class academic institute currently has 17 different Departments and over 200 faculty, and over 5000 students.</p>
+    <p>The institute currently offers a host of programmes like B. Tech., M. Tech., M. Sc. Tech., and MBA. In addition the School also offers M. Phil. and full time as well as part time Ph. D. programmes in the field of engineering, Sciences, Management and Humanities and Social Sciences. ISM also awards D.Sc. as the highest degree of academic achievement. The admission to the four year and the five year graduate courses are through the prestigious IIT-JEE examination. The institute has links with reputed universities and institutes across the globe and has an alumni base all over the world.  Today the School is making foray into the newer areas of academic endeavors in tune with the changing ties and demands of the industries.</p>
+    </font>
+</div>
+<div id="dance" >
+    <font color="white">
+    <h2 style="text-align: center; margin: 3px 0px/">Foot Loose</h2>
+The Ultimate solo dance face-off. It is for those who think they can set ablaze the stage and steal the thunder while others stand watching, with awe and jealousy! This is the ultimate quest for the greatest dancers.
+<br><br>
+<a href="docs/Footloose.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Roshan Buranwal&emsp;&emsp;Sameer Gautam &emsp;&emsp; Arcot Shirish&emsp;&emsp;&emsp;&nbsp;T Dinesh
+<br/>
+08757891822&emsp;&emsp;&emsp;&nbsp;&nbsp;09572144545  &emsp;&emsp;&emsp;&nbsp;09955348737 &emsp;&emsp;&emsp;08603438756
+    <h2 style="text-align: center; margin: 3px 0px/">Hustle Herd</h2>
+    <h3 style="text-align: center; font-size:18px;">In association with Hip-Hop India</h2>
+Cut-throat competition over the years has made it one of the most sought-after and popular dance events.Let your steps radiate your ideas and compliment the music. Stand out in the art of blending the eye, ear and mind.<br><br>
+<a href="docs/Hustle Herd.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Neeraj Meena &emsp;&emsp;Shubham Singh &emsp;&emsp;Ankit Dalal&emsp;&emsp;&emsp;&nbsp;&nbsp;Sumant Sharma
+<br/>
+08987419604&emsp;&emsp;&nbsp;&nbsp;07250882448&emsp;&emsp;&emsp;08051011443&emsp;&emsp;&emsp;08092055386 
+
+<!--   <h2 style="text-align: center; margin: 3px 0px/">Street Beats</h2>
+Here, there is no confined dance floor. Just get up to the music ringing in the atmosphere, rise up and light up the streets. Street Beats is the one street dancing event where you can prove your mettle and show the hustling-bustling crowd what you have got inside.<br><br>
+<a href="docs/Street Beats.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+T Dinesh &emsp;&emsp;&emsp;&nbsp;&nbsp;Sumant Sharma 
+<br/>
+08603438756&emsp;&emsp;08092055386  -->
+
+    </font>
+</div>
+<div id="music" >
+    <font color="white" style="opacity:1;">
+
+<h2 style="text-align: center; margin: 3px 0px/">Sursangram</h2>
+Sursangram- The battle of tunes! Are you the one who gets music ringing inside your head? Are you the one who starts humming the moment you hear music playing? If yes, then what are you waiting for? Unleash your shackles and show the world what you are capable of in this SURSANGRAM.
+<br><br>
+<a href="docs/Sursangram.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Rimjhim Narain&emsp;&emsp;Aditya Singh &emsp;&emsp; Akash Kumar
+</br>
+09470637147&emsp;&emsp;&nbsp;&nbsp;07250459071  &emsp;&emsp;09507622087
+
+<h2 style="text-align: center; margin: 3px 0px/">Avalanche</h2>
+The annual rock band competition of ISM. The event is a competition amongst the best of the bands trying to prove musical supremacy over the rest.<br><br>
+<a href="docs/Avalanche.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Samudra Sonowal&emsp;&emsp;Mohit Jain
+<br/>
+08051014560&emsp;&emsp;&emsp;&emsp;9162687488
+<br/><br/>
+Vivek Kumar &emsp;&emsp; Shashank Dubey
+<br/>
+08809588882  &emsp;&emsp;08092055384
+<h2 style="text-align: center; margin: 3px 0px/">Unplugged</h2>
+The event shall be a competition between bands performing self-composed or cover songs without aid of electrical music instruments. 
+<br><br>
+<a href="docs/Unplugged.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Parv Mehta &emsp;&emsp;&nbsp;&nbsp;Lata Kumari 
+</br>
+07898249735&emsp;&emsp;08986673698
+
+</font>
+    </div>
+<div id="drama" >
+    <font color="white" style="opacity:1;">
+<h2 style="text-align: center; margin: 3px 0px/">Off The Cuff</h2>
+The true actor is the one who can act anytime, anywhere and fit in any role. Show your spontaneity and team spirit as you get 24 hours to prepare the skit. Let your imagination loose as the plot has already been set. The time has come for you to play your part. We give you the situation and you act it out. 
+<br/><br/>
+<a href="docs/OFF-THE-CUFF-2014.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Pawan Kumar 
+</br>
+8000083633
+</br>
+pawan71515@gmail.com
+</br>
+<h2 style="text-align: center; margin: 3px 0px/">Halla Bol</h2>
+It is time to break the formal barriers and let the message be heard to all. Show your fervor and vigor at Nukkad, the nationwide street play competition.
+<br><br>
+<a href="docs/HALLA BOL-2014.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Radhika Lohia&emsp;&emsp;Maninderjeet Kaur 
+</br>
+09199069165&emsp;&emsp;&nbsp;07549022321
+
+<h2 style="text-align: center; margin: 3px 0px/">ISM MUN</h2>
+With innovative councils, compelling crisis simulations, a dynamic International Press, state-of- the-art infrastructure and the extravaganza that comes along with the only Earth Science Institute of the country - not to mention the handsome prize money you stand to win - this is one MUN you wouldn’t want to miss. Add to that the plethora of concerts and shows in the fest itself - soul-stirring classical music, international rock gigs, mind boggling performances; Executive Board and International Press remuneration, ISM MUN has it all!
+<br><br>
+<a href="http://mun.srijanism.org/" target="_blank">Visit the ISM MUN website</a>
+
+<h2 style="text-align: center; margin: 3px 0px/">Rangmanch</h2>
+If you think you can overwhelm the audience with acting, direction, script and dialogues, then it's time to form a team and take centre stage at Rangmanch – the one-act play competition at SRIJAN 2014.<br><br>
+<a href="docs/NATYAMANCH-2014.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Nitin Bansal 
+<br/>
+09852046470
+<h2 style="text-align: center; margin: 3px 0px/">Khamoshi</h2>
+ Come forward and speak but this time don't pull up your vocal chords. Time is to fire your gestures to burn the world with ideas. Before the human voice was there, gestures served not only to communicate but to aid in the development of vocal sounds.<br><br>
+<a href="docs/KHAMOSHI-2014.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Mohit Sai
+<br/>
+09908152269
+<h2 style="text-align: center; margin: 3px 0px/">Resolved 2.0</h2>
+Resolved 2.0 is the annual Inter College Debate competition organised by ISM, Dhanbad. This year tongues will wag and war @ Srijan 2014, March 28-30. Be there to stand, deliver and fight.
+<br/><br/><a href="docs/RESOLVED.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Vaishali Gupta
+<br/>
+09534081165
+<br/>
+
+<h2 style="text-align: center; margin: 3px 0px/">Hasyakavi Sammelan</h2>
+Hasyakavi Sammelan- The curtain has risen and eyes of all the audience have stopped on you. If you have such a humor which can make us laugh, can you perform your poetries with great humor or you are an amazing standup comedian. If yes, then whom are you waiting for. This Srijan brings you a great opportunity to show your talent.
+<br/><br/><a href="docs/hasyakaviSammelan.docx" target="_blank">Download full Rules and Regulations</a>
+<h3>Coordinators :</h3>
+Tarun Kumar Ahirwar
+<br/>
+09801359353
+<br/>
+
+</font> 
+</div>
+<div id="photography" >
+<font color="white" style="opacity:1;">
+<h2 style="text-align: center;">Paridhaan</h2>
+Paridhaan- the fashion show has been the crown jewel amongst the events of Srijan for many years now. Being a main stage event with maximum number of participants for 3 consecutive years, it has built for itself a reputation to be reckoned with. So, show the world how you carry it on and get ready to sizzle on the ramp.
+<br/>
+<br/>
+<a href="docs/Paridhaan.docx" target="_blank">Download full Rules and Regulations</a>
+<br/>
+<h3>Coordinators :</h3>
+<div>
+Shreyansh Jain&emsp;&emsp;&emsp;&emsp;&nbsp;Swati Kalra
+<br/>
+07209838702&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;09534053696
+<br/><br/>
+Anant Vikram Singh &emsp;&emsp; Kuber Sharma
+</br>
+07561995610  &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;09199907390
+</div>
+</div>
+
+<div id="snap" >
+<font color="white" style="opacity:1;">
+<h2 style="text-align: center;">Snappers 2014</h2>
+Srijan 2k14 presents the photographic competition of the Indian School of Mines- SNAPPERS 2k14. We encourage you to submit photographs that are real. We want to see the world through your eyes, not
+through photo editing tools.
+<br/>
+<br/>
+<a href="docs/snappers.docx" target="_blank">Download full Rules and Regulations</a>
+<br/>
+<h3>Coordinators :</h3>
+<div>
+Risabh Chourdia&emsp;&emsp;&emsp;&emsp;&nbsp;Vipul Tiberwal
+<br/>
+09504445212&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;08986136669
+<br/>
+</div>
+
+<!--<h2 style="text-align: center;">SPEAKING FRAME</h2>
+A photograph is one that fully expresses what one feels, in the deepest sense, about what is being photographed . Pick a theme and work it to exhaustion. This time Fotofreaks in association with Srijan gives you the unique opportunity to express your views and thoughts on social issues by your photographs.
+<br/>
+<br/>
+<a href="docs/SPEAKINGFRAME.pdf" target="_blank">Download full Rules and Regulations</a>
+<br/>
+<h3>Organisers :</h3>
+<div>
+Vivek Krishna Agrawal&emsp;&emsp;&emsp;&emsp;&nbsp;Rahul Sharma&emsp;&emsp;&emsp;&emsp;&nbsp;Kamal Krishna
+<br/>
+08084846025&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&nbsp;08051053816&emsp;&emsp;&emsp;&emsp;&emsp;9122977523-->
+<br/>
+</div>
+
+<div id="eventteam">
+
+    <h2 class="contactheadings">Event Management Team</h2>
+&emsp;&emsp;&emsp;&emsp;&emsp;
+    <div class="contact" style="margin-left:-8%;">Shivam Agrawal<br />Event Management Head<br />+91-8757087600<br />marshall.shivam@gmail.com<br><a href="https://www.facebook.com/shivam.agrawal.756859" target='_blank'><div class="fbProfile"></div></a></div>
+<br><br>
+    <div class="contact">Aditya Suman<br />+91-9031378981<br />aditya.suman86@gmail.com<br><a href="https://www.facebook.com/adityaraj.suman.3" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Arish Enam<br />+91-8235418821<br />enamarish@yahoo.com<br><a href="https://www.facebook.com/arish.enam" target='_blank'><div class="fbProfile"></div></a></div>
+<br><br>
+    <div class="contact" style="margin-left:3%;">Gunjan Kumar<br />+91-9693490228<br />gunjankmr1993@gmail.com<br><a href="https://www.facebook.com/gunjan.k.singh.9" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Rahul Bhutani<br />+91-8298087964<br />rahulbhutani02@gmail.com<br><a href="https://www.facebook.com/Rahul.bhutani02" target='_blank'><div class="fbProfile"></div></a></div>
+<br><br>
+    <div class="contact" style="margin-left:6%;">Ashutosh Rathi	<br />+91-8757857188<br />ashu_17rathi@gmail.com<br><a href="https://www.facebook.com/ashu.rathi.9" target='_blank'><div class="fbProfile"></div></a></div>
+    <div class="contact">Vaishali Gupta<br />+91-9534081165<br />vaishali.gupta1207@gmail.com<br><a href="https://www.facebook.com/vaishali.gupta.112" target='_blank'><div class="fbProfile"></div></a></div>
+
+</div>
+
+</div>
+</font></div>
+    
+</div>
+</div>
+
+
+
+</div> <!-- body wrapper ends -->
+<script type="text/javascript" src="js/PxLoader.js"></script>
+<script type="text/javascript" src="js/PxLoaderImage.js"></script>
+<script type="text/javascript" src="js/PxLoaderSound.js"></script>
+<script type="text/javascript" src="js/PxLoaderVideo.js"></script>
+<script type="text/javascript" src="js/tv.js"></script>	
+
+</body>
+
+</html>
