@@ -1,10 +1,12 @@
 $(document).ready(function() {
 	
-	var noOfNews = 5;			//Modify THIS according to the number of news items.
+	var noOfNews = 7;		//Modify THIS according to the number of news items.	
 	var newsTimeout = 5000;		//Timeout for each news entry
 	
 	var curNews = 1;
+	var curLogo = 1;
 	var curCont = document.getElementById("news" + curNews + "cont");
+	var curLogoCont = document.getElementById("logo" + curLogo + "cont");
 	
 	while(curNews <= noOfNews)
 	{
@@ -42,6 +44,52 @@ $(document).ready(function() {
 		curNews++;
 				
 	}, newsTimeout);    
+});
+
+$(document).ready(function() {
+			
+	var noOfLogo = 2;			//Modify THIS according to the number of header logo items.	
+	var LogoTimeout = 5000;		//Timeout for each news entry
+	
+	var curLogo = 1;
+	var curLogoCont = document.getElementById("logo" + curLogo + "cont");
+	
+	while(curLogo <= noOfLogo)
+	{
+		if(curLogo == 1) curLogo = 2;
+		curLogoCont = document.getElementById("logo" + curLogo + "cont");
+		
+		curLogoCont.style.height="0";
+		curLogoCont.style.width="0";
+		curLogoCont.style.opacity="0";
+		
+		curLogo++;
+	}
+	
+	curLogo = 1;
+	curLogoCont = document.getElementById("logo" + curLogo + "cont");
+	var prevLogoCont = document.getElementById("logo" + curLogo + "cont");
+		
+	setInterval(function(){
+		
+		if(curLogo > noOfLogo)
+		{
+			curLogo = 1;
+		}
+		curLogoCont = document.getElementById("logo" + curLogo + "cont");
+		
+		prevLogoCont.style.opacity="0";
+		prevLogoCont.style.height="0";
+		prevLogoCont.style.width="0";
+		curLogoCont.style.height="80%";
+		curLogoCont.style.width="50%";
+		curLogoCont.style.opacity="1";
+		
+		prevLogoCont = curLogoCont;	
+		
+		curLogo++;
+				
+	}, LogoTimeout);    
 });
 
 
